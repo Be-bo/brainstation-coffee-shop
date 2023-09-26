@@ -138,14 +138,13 @@
 
 .were-different__can-img{
     width: 150px;
-    z-index: 2;
+    z-index: 5;
     animation: rotate 4s linear infinite;
     animation-play-state: paused;
 }
 
-.were-different__can-border:hover + .were-different__can-img{
+.were-different__can-img:hover{
     animation-play-state: running;
-    border: 2px solid red;
 }
 
 @keyframes rotate{
