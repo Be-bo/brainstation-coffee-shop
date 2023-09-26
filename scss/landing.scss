@@ -1,4 +1,4 @@
-@import 'global';
+@use './partials/global' as *; // for our purposes same as: @import 'partials/global';
 
 /* MARK: HERO */
 .hero{
@@ -7,10 +7,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 7rem;
+
+    @include mobile{
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
 
 .hero__card{
     max-width: 40%;
+
+    @include mobile{
+        text-align: center;
+    }
 }
 
 .hero__text{
@@ -81,10 +90,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 7rem;
+
+    @include mobile{
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
 
 .were-different__info-container{
     max-width: 40%;
+    @include mobile{
+        text-align: center;
+    }
 }
 
 .were-different__info-container h1{
@@ -122,6 +139,22 @@
 .were-different__can-img{
     width: 150px;
     z-index: 2;
+    animation: rotate 4s linear infinite;
+    animation-play-state: paused;
+}
+
+.were-different__can-border:hover + .were-different__can-img{
+    animation-play-state: running;
+    border: 2px solid red;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .were-different__icon-container{
@@ -144,38 +177,55 @@
     font-size: 45px;
     font-weight: 400;
     padding: 3rem 0;
+    animation: colorChange 2.5s infinite;
+}
+
+@keyframes colorChange{
+    0%{
+        background-color: var(--graphite-color);
+    }
+
+    50%{
+        background-color: var(--nitro-blue-color);
+    }
+
+    100%{
+        background-color: var(--graphite-color);
+    }
 }
 
 
 
 /* MARK:  FOOTER */
 .footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 7rem;
     background-color: var(--nitro-pink-color);
-    text-align: center;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
 }
 
 .footer__card{
-    display: inline-block;
-    width: 26.7%; /* 80/3 */
+    display: flex;
+    flex-direction: column;
     vertical-align: top;
     text-align: left;
-    margin: 40px 0;
+    @include mobile{
+        text-align: center;
+    }
+}
+
+.footer__social{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .footer__title{
     margin-bottom: 20px;
-}
-
-
-/* MARK: MEDIA QUERIES */
-@media(max-width: 1100px){
-    .product__container{
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .product__card{
-        min-width: 40%;
-    }
 }

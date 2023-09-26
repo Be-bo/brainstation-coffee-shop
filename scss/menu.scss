@@ -1,4 +1,6 @@
-/* MARK: MAIN CLASSES */
+@use './partials/global' as *; // for our purposes same as: @import 'partials/global';
+
+/* MARK: MENU */
 .menu{
     display: flex;
     justify-content: space-around;

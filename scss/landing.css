@@ -1,0 +1,367 @@
+/* MARK: ROOT */
+:root {
+  --nitro-blue-color: #5BACC3;
+  --nitro-pink-color: #FFF0ED;
+  --graphite-color: #393939;
+  --light-gray-color: #F7F7F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* MARK: ELEMENT TAGS */
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5;
+  font-weight: 300;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* MARK: NAV BAR */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nitro-pink-color);
+  padding: 1rem 2rem;
+}
+
+.nav-bar__logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar__list {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  list-style-type: none;
+}
+
+.nav-bar__text {
+  color: black;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+/* MARK: COMMON CLASSES */
+.btn-container {
+  width: 160px;
+  height: 60px;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .btn-container {
+    margin: auto;
+  }
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  color: white;
+  font-size: 21px;
+  font-weight: 400;
+  border: solid 2px black;
+  transform: translate(-5px, -5px);
+}
+
+.btn:active {
+  transform: translate(0px, 0px);
+}
+
+.btn-bkg {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-color: var(--nitro-blue-color);
+}
+
+.icon {
+  width: 50px;
+}
+
+/* MARK: STYLING OVERRIDE */
+.no-top-padding {
+  padding-top: 0;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.nitro-blue-color {
+  color: var(--nitro-blue-color);
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+/* MARK: HERO */
+.hero {
+  background-color: var(--nitro-pink-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 7rem;
+}
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.hero__card {
+  max-width: 40%;
+}
+@media (max-width: 1000px) {
+  .hero__card {
+    text-align: center;
+  }
+}
+
+.hero__text {
+  margin: 2rem 0;
+}
+
+.hero__img {
+  max-width: 50%;
+}
+
+/* MARK: OUR PRODUCTS */
+.product {
+  background-color: var(--light-gray-color);
+  padding: 3rem 7rem;
+  text-align: center;
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.product__card {
+  width: 30%;
+  max-width: 30%;
+  min-height: 375px;
+  background-color: white;
+  box-shadow: 0px 5px 9px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position: relative;
+}
+
+.product__footer {
+  background-color: var(--nitro-pink-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+}
+
+.product__text-info {
+  text-align: left;
+}
+
+.product__img {
+  margin: 1rem;
+}
+
+.product__price {
+  font-weight: 700;
+}
+
+.product .btn-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MARK: WE'RE DIFFERENT */
+.were-different {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7rem;
+}
+@media (max-width: 1000px) {
+  .were-different {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.were-different__info-container {
+  max-width: 40%;
+}
+@media (max-width: 1000px) {
+  .were-different__info-container {
+    text-align: center;
+  }
+}
+
+.were-different__info-container h1 {
+  margin-bottom: 2rem;
+}
+
+.were-different__can-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.were-different__can-border {
+  width: 100%;
+  height: 100%;
+  border: solid 5px var(--nitro-blue-color);
+  z-index: 3;
+  position: absolute;
+}
+
+.were-different__can-bkg {
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  position: absolute;
+  background-image: url("../assets/images/coldbrewbackground.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(20px, 20px);
+  z-index: 1;
+}
+
+.were-different__can-img {
+  width: 150px;
+  z-index: 2;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+}
+
+.were-different__can-border:hover + .were-different__can-img {
+  animation-play-state: running;
+  border: 2px solid red;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.were-different__icon-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+/* MARK: DISCOUNT */
+.discount {
+  background-color: white;
+  text-align: center;
+  padding: 7rem;
+}
+
+.discount__text {
+  color: white;
+  background-color: var(--graphite-color);
+  font-size: 45px;
+  font-weight: 400;
+  padding: 3rem 0;
+  animation: colorChange 2.5s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: var(--graphite-color);
+  }
+  50% {
+    background-color: var(--nitro-blue-color);
+  }
+  100% {
+    background-color: var(--graphite-color);
+  }
+}
+/* MARK:  FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 7rem;
+  background-color: var(--nitro-pink-color);
+}
+@media (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.footer__card {
+  display: flex;
+  flex-direction: column;
+  vertical-align: top;
+  text-align: left;
+}
+@media (max-width: 1000px) {
+  .footer__card {
+    text-align: center;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=landing.css.map */
